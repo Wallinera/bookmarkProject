@@ -221,11 +221,18 @@ function Features() {
     setActiveTab(e.target.id);
   }
 
+  function handleKeyDown(e) {
+    if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      handleTabClick(e);
+    }
+  }
+
   return (
     <section id="features" className="overflow-x-hidden">
       <div className="space-y-10 section-container">
         {/*Section Header*/}
-        <header>
+        <header className="flex flex-col items-center">
           <h3>Features</h3>
           <p className="lg:text-center lg:mx-auto lg:text-xl">
             Our aim is to make it quick and easy for you to access your
@@ -243,7 +250,9 @@ function Features() {
               className={`features__tab--text ${
                 activeTab === "1" && "opacity-100"
               }`}
+              tabIndex={0}
               onClick={handleTabClick}
+              onKeyDown={handleKeyDown}
             >
               Simple Bookmarking
             </p>
@@ -261,7 +270,9 @@ function Features() {
               className={`features__tab--text   ${
                 activeTab === "2" && "opacity-100"
               }`}
+              tabIndex={0}
               onClick={handleTabClick}
+              onKeyDown={handleKeyDown}
             >
               Speedy Searching
             </p>
@@ -279,7 +290,9 @@ function Features() {
               className={`features__tab--text   ${
                 activeTab === "3" && "opacity-100"
               }`}
+              tabIndex={0}
               onClick={handleTabClick}
+              onKeyDown={handleKeyDown}
             >
               Easy Sharing
             </p>

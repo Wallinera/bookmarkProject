@@ -16,16 +16,16 @@
 
 @layer base {
   h1 {
-    @apply text-3xl text-center font-semibold text-veryDarkBlue  lg:text-6xl lg:font-medium  lg:text-left;
+    @apply text-3xl text-center font-semibold text-veryDarkBlue  lg:text-6xl lg:font-medium  md:text-left;
   }
   h3 {
-    @apply text-2xl font-semibold text-veryDarkBlue mb-5 lg:text-3xl;
+    @apply text-2xl font-semibold text-veryDarkBlue mb-5 md:text-3xl;
   }
   h4 {
-    @apply text-xl font-semibold text-veryDarkBlue lg:text-2xl;
+    @apply text-xl font-semibold text-veryDarkBlue md:text-2xl;
   }
   p {
-    @apply text-center text-grayishBlue max-w-md leading-7 lg:max-w-xl lg:text-2xl lg:text-left lg:mt-0 lg:mx-0;
+    @apply text-center text-grayishBlue max-w-md leading-7 md:max-w-xl md:text-2xl lg:text-left md:mt-0 md:mx-0;
   }
 }
 
@@ -57,10 +57,10 @@
     @apply text-white font-semibold bg-softBlue border-2 border-softBlue md:text-base  p-4 rounded-lg cursor-pointer shadow-md hover:bg-white hover:text-softBlue duration-200 lg:px-8;
   }
   .img-bg {
-    @apply absolute h-[230px] top-15 left-15 w-[2000px] lg:h-[350px] lg:left-40  rounded-l-full lg:top-35 bg-softBlue;
+    @apply absolute h-[180px] sm:h-[230px]  top-15 left-15 w-[2000px] md:h-[350px] lg:left-40  rounded-l-full lg:top-35 bg-softBlue;
   }
   .features__img--bg {
-    @apply absolute h-[230px] top-15 -left-10 w-full lg:h-[350px] lg:-left-80  rounded-r-full lg:top-35 bg-softBlue;
+    @apply absolute h-[180px] sm:h-[230px] top-15 -left-10 w-full lg:h-[350px] lg:-left-80  rounded-r-full lg:top-35 bg-softBlue;
   }
 
   .features__tab {
@@ -82,7 +82,7 @@
     @apply flex flex-col items-center justify-between border-b-2 border-gray-200 py-4;
   }
   .faq__tab--text {
-    @apply text-lg   text-veryDarkBlue duration-200 group-hover:text-softRed;
+    @apply text-left text-lg text-veryDarkBlue duration-200 group-hover:text-softRed;
   }
   .faq__tab--question {
     @apply flex items-center justify-between w-full cursor-pointer;
